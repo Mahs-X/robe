@@ -1,5 +1,6 @@
 // src/app/components/LoginForm.js
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signInWithGoogle } from '@/app/lib/auth'; // auth.js থেকে আমদানি
@@ -62,6 +63,10 @@ export default function LoginForm() {
             </>
           )}
         </button>
+        <button className='bg-blue-500 text-white px-4 py-2 rounded mt-4'>
+  <Link href="/main">Student DataBase</Link>
+</button>
+
       </div>
     </div>
   );

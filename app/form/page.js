@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useMemo } from 'react';
 import SimpleTagInput from '../components/inputTagForm'; 
+import Link from 'next/link';
 import { addDoc, collection } from "firebase/firestore"; // <--- Firestore ইমপোর্ট ঠিক করা হয়েছে
 // ফিক্স করা হয়েছে: সংকলন ত্রুটি এড়াতে Alias Path (@/lib/firebaseConfig) এর বদলে Relative Path ব্যবহার করা হয়েছে।
 import { db } from '@/app/lib/firebaseConfig'; 
@@ -263,7 +264,9 @@ export default function Page() {
             {uploading ? 'সংরক্ষণ চলছে...' : 'ফর্ম জমা দিন'}
             </button>
           </form>
-
+        <button className='bg-blue-500 text-white px-4 py-2 rounded mt-4'>
+  <Link href="/main">Student DataBase</Link>
+</button>
           <p className='text-[#bbb8b8] text-[13px] mt-5'>Made By ❤ Alamin</p>
         </div>
       </div>
